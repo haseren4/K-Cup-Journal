@@ -11,27 +11,6 @@ public class KCup {
 
     @PrimaryKey@Generated(value = "auto")
     private int id;
-
-    public KCup(int id, String name, String company, int rating, int overall, int flavor, int bitterness, int sweetness, String comments) {
-        this.id = id;
-        this.name = name;
-        this.company = company;
-        this.rating = rating;
-        this.overall = overall;
-        this.flavor = flavor;
-        this.bitterness = bitterness;
-        this.sweetness = sweetness;
-        this.comments = comments;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     @ColumnInfo(name= "name")
     private String name;
     @ColumnInfo(name = "company")
@@ -49,7 +28,8 @@ public class KCup {
     @ColumnInfo(name = "comments")
     private String comments;
 
-    public KCup(String name, String company, int rating, int overall, int flavor, int bitterness, int sweetness, String comments) {
+    public KCup(int id, String name, String company, int rating, int overall, int flavor, int bitterness, int sweetness, String comments) {
+        this.id = id;
         this.name = name;
         this.company = company;
         this.rating = rating;
@@ -58,6 +38,15 @@ public class KCup {
         this.bitterness = bitterness;
         this.sweetness = sweetness;
         this.comments = comments;
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

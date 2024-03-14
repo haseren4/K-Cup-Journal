@@ -17,11 +17,19 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.room.Room;
+
+import java.util.List;
 
 import walkinsilver.example.k_cupjournal.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    KCupDB db;
+    KCupDao dao;
+    List<KCup> entries;
+
+    Context con;
     LinearLayout recordContainer;
     FloatingActionButton addBtn;
 
@@ -33,15 +41,22 @@ public class MainActivity extends AppCompatActivity {
         addBtn = findViewById(R.id.addBtn);
         recordContainer = findViewById(R.id.recordContainer);
 
-        Context con = this.getApplication().getApplicationContext();
+        db = Room.databaseBuilder(getApplicationContext(), KCupDB.class, "KCupDatabase").allowMainThreadQueries().build();
+        dao = db.kcupDao();
 
-        loadDatabase();
-        addViews();
+        con = this.getApplication().getApplicationContext();
+
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                loadDatabase();
+                addViews();
+            }
+        });
+        t.run();
         
         addBtn.setOnClickListener(l ->{
-            TextView tv = new TextView(con);
-            tv.setText(R.string.lorem_ipsum_title);
-            recordContainer.addView(tv);
             this.finish();
             Intent addIntent = new Intent(this, AddRecordActivity.class);
             startActivity(addIntent);
@@ -50,9 +65,22 @@ public class MainActivity extends AppCompatActivity {
    }
 
     private void addViews() {
+        for(KCup entry : entries){
+            TextView tv = new TextView(con);
+            tv.setText(entry.getName());
+            recordContainer.addView(tv);
+        }
     }
 
     private void loadDatabase() {
+        entries = dao.getAll();
+
+        if(entries.isEmpty()){
+            KCup chaiLatte = new KCup(0, "Chai Latte", "Walmart",5,100,100,0,40, "So easy and a great Chai Latte for being at home.");
+            dao.insertKCup(chaiLatte);
+            entries.add(chaiLatte);
+        }
+
     }
 
 }

@@ -11,7 +11,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.room.Room;
 
-import java.util.List;
 
 public class AddRecordActivity extends AppCompatActivity {
     Button saveBtn;
@@ -31,11 +30,6 @@ public class AddRecordActivity extends AppCompatActivity {
         db = Room.databaseBuilder(getApplicationContext(), KCupDB.class, "KCupDatabase").build();
 
         KCupDao dao = db.kcupDao();
-        List<KCup> entries = dao.getAll();
-
-        for(KCup kcup : entries){
-            System.out.println(kcup.getName());
-        }
 
         saveBtn = findViewById(R.id.saveBtn);
         saveBtn.setOnClickListener(l ->{
