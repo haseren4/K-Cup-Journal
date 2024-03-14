@@ -66,9 +66,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void addViews() {
         for(KCup entry : entries){
-            TextView tv = new TextView(con);
-            tv.setText(entry.getName());
-            recordContainer.addView(tv);
+            TextView v = new TextView(con);
+            v.setText(entry.getName());
+
+            recordContainer.addView(v);
         }
     }
 
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         entries = dao.getAll();
 
         if(entries.isEmpty()){
+            System.out.println("Create Bootstrap Item(s)");
             KCup chaiLatte = new KCup(0, "Chai Latte", "Walmart",5,100,100,0,40, "So easy and a great Chai Latte for being at home.");
             dao.insertKCup(chaiLatte);
             entries.add(chaiLatte);

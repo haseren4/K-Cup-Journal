@@ -9,7 +9,7 @@ import javax.annotation.processing.Generated;
 @Entity(tableName = "kcup")
 public class KCup {
 
-    @PrimaryKey@Generated(value = "auto")
+    @PrimaryKey(autoGenerate = true)
     private int id;
     @ColumnInfo(name= "name")
     private String name;
