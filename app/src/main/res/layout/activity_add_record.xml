@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/nameTbx"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -28,7 +28,7 @@
             android:text="@string/label_name" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/companyTbx"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -48,11 +48,12 @@
             android:text="@string/label_overall_score" />
 
         <SeekBar
-            android:id="@+id/seekBar"
+            android:id="@+id/overallSeek"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="100"
-            android:min="0" />
+            android:min="0"
+            android:progress="50" />
 
         <TextView
             android:id="@+id/textView2"
@@ -61,9 +62,12 @@
             android:text="@string/label_bitterness_score" />
 
         <SeekBar
-            android:id="@+id/seekBar2"
+            android:id="@+id/bitternessSeek"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:min="0"
+            android:progress="50" />
 
         <TextView
             android:id="@+id/textView3"
@@ -72,9 +76,12 @@
             android:text="@string/label_flavor_score" />
 
         <SeekBar
-            android:id="@+id/seekBar3"
+            android:id="@+id/flavorSeek"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:min="0"
+            android:progress="50" />
 
         <TextView
             android:id="@+id/textView4"
@@ -83,9 +90,12 @@
             android:text="@string/label_sweetness_score" />
 
         <SeekBar
-            android:id="@+id/seekBar4"
+            android:id="@+id/sweetnessSeek"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:min="0"
+            android:progress="50" />
 
         <TextView
             android:id="@+id/textView5"
@@ -94,7 +104,7 @@
             android:text="@string/label_comments" />
 
         <EditText
-            android:id="@+id/editTextTextMultiLine"
+            android:id="@+id/commentTbx"
             android:layout_width="match_parent"
             android:layout_height="362dp"
             android:ems="10"

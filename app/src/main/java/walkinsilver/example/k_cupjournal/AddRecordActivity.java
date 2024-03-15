@@ -3,6 +3,9 @@ package walkinsilver.example.k_cupjournal;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RatingBar;
+import android.widget.SeekBar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +16,11 @@ import androidx.room.Room;
 
 
 public class AddRecordActivity extends AppCompatActivity {
+
+    EditText nameTbx, companyTbx;
+    RatingBar ratingBar;
+    SeekBar overallSeek, flavorSeek, bitternessSeek, sweetnessSeek;
+    EditText commentTbx;
     Button saveBtn;
     KCupDB db;
 
@@ -27,24 +35,45 @@ public class AddRecordActivity extends AppCompatActivity {
             return insets;
         });
 
-        db = Room.databaseBuilder(getApplicationContext(), KCupDB.class, "KCupDatabase").build();
+        nameTbx = findViewById(R.id.nameTbx);
+        companyTbx = findViewById(R.id.companyTbx);
+
+        ratingBar = findViewById(R.id.ratingBar);
+
+        overallSeek = findViewById(R.id.overallSeek);
+        flavorSeek = findViewById(R.id.flavorSeek);
+        bitternessSeek = findViewById(R.id.bitternessSeek);
+        sweetnessSeek = findViewById(R.id.sweetnessSeek);
+
+        commentTbx = findViewById(R.id.commentTbx);
+
+        db = Room.databaseBuilder(getApplicationContext(), KCupDB.class, "KCupDatabase")
+                .allowMainThreadQueries()
+                .build();
 
         KCupDao dao = db.kcupDao();
 
         saveBtn = findViewById(R.id.saveBtn);
         saveBtn.setOnClickListener(l ->{
-            validateInputs();
-            saveToDatabase();
             System.out.println("Save Button Pressed");
+
+            KCup kCup = new KCup(
+                    0,
+                    nameTbx.getText().toString(),
+                    companyTbx.getText().toString(),
+                    ratingBar.getNumStars(),
+                    overallSeek.getProgress(),
+                    flavorSeek.getProgress(),
+                    bitternessSeek.getProgress(),
+                    sweetnessSeek.getProgress(),
+                    commentTbx.getText().toString());
+
+            dao.insertKCup(kCup);
+
             Intent backIntent = new Intent(this, MainActivity.class);
             this.finish();
             startActivity(backIntent);
         });
     }
 
-    private void validateInputs() {
-    }
-
-    private void saveToDatabase() {
-    }
 }

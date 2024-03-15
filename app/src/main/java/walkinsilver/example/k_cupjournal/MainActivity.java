@@ -66,9 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void addViews() {
         for(KCup entry : entries){
-            TextView v = new TextView(con);
-            v.setText(entry.getName());
-
+            KCupListView v = new KCupListView(con, entry);
             recordContainer.addView(v);
         }
     }
