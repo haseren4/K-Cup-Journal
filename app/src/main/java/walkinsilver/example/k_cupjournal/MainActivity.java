@@ -67,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
     private void addViews() {
         for(KCup entry : entries){
             KCupListView v = new KCupListView(con, entry);
+            v.deleteBtn.setOnClickListener(l->{
+                dao.deleteKCup(v.kCup);
+                recordContainer.removeView(v);
+            });
             recordContainer.addView(v);
         }
     }
