@@ -16,7 +16,7 @@ public class KCup {
     @ColumnInfo(name = "company")
     private String company;
     @ColumnInfo(name = "rating")
-    private int rating;
+    private float rating;
     @ColumnInfo(name = "overall")
     private int overall;
     @ColumnInfo(name = "flavor")
@@ -28,7 +28,7 @@ public class KCup {
     @ColumnInfo(name = "comments")
     private String comments;
 
-    public KCup(int id, String name, String company, int rating, int overall, int flavor, int bitterness, int sweetness, String comments) {
+    public KCup(int id, String name, String company, float rating, int overall, int flavor, int bitterness, int sweetness, String comments) {
         this.id = id;
         this.name = name;
         this.company = company;
@@ -65,11 +65,11 @@ public class KCup {
         this.company = company;
     }
 
-    public int getRating() {
+    public float getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(float rating) {
         this.rating = rating;
     }
 

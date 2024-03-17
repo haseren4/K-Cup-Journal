@@ -16,4 +16,6 @@ public interface KCupDao {
     void deleteKCup(KCup kCup);
     @Query("SELECT * FROM kcup")
     List<KCup> getAll();
+    @Query("SELECT * FROM kcup WHERE id = :id")
+    KCup getKCupByID(int id);
 }

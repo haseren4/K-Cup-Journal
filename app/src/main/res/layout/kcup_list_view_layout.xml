@@ -5,7 +5,8 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_alignParentBottom="true">
+    android:layout_alignParentBottom="true"
+    android:foregroundTint="@color/black">
 
 
     <TextView
@@ -37,10 +38,11 @@
 
     <ImageButton
         android:id="@+id/imageButton"
+        style="@style/Widget.AppCompat.ImageButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:adjustViewBounds="false"
-        android:background="@android:drawable/ic_menu_delete"
+        android:backgroundTint="@color/white"
         android:contentDescription="Delete Button"
         android:cropToPadding="false"
         android:scaleType="fitCenter"

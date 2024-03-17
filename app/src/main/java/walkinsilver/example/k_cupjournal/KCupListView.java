@@ -1,6 +1,10 @@
 package walkinsilver.example.k_cupjournal;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,16 +37,13 @@ public class KCupListView extends LinearLayout {
 
 
         this.setOnLongClickListener(l ->{
-            LayoutInflater toast_inflater = (LayoutInflater)  context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View layout = inflater.inflate(R.layout.kcup_list_view_toast_layout,
-                    (ViewGroup) findViewById(R.id.layout));
 
-            Toast toast = new Toast(context);
-            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-            toast.setDuration(Toast.LENGTH_LONG);
-
-            toast.setView(layout);
-            toast.show();
+            Intent viewIntent = new Intent(this.getContext(), ViewKCupReviewActivity.class);
+            viewIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            Bundle b = new Bundle();
+            b.putInt("KCUP_ID_INT", kcup.getId());
+            viewIntent.putExtras(b);
+            context.startActivity(viewIntent);
             return false;
         });
     }
