@@ -61,7 +61,7 @@ public class AddRecordActivity extends AppCompatActivity {
                     0,
                     nameTbx.getText().toString(),
                     companyTbx.getText().toString(),
-                    ratingBar.getNumStars(),
+                    ratingBar.getRating(),
                     overallSeek.getProgress(),
                     flavorSeek.getProgress(),
                     bitternessSeek.getProgress(),

@@ -34,7 +34,8 @@
         android:isIndicator="true"
         android:longClickable="false"
         app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:numStars="5"/>
 
     <ImageButton
         android:id="@+id/imageButton"
