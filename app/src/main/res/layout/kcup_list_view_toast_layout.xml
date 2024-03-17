@@ -1,11 +1,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/toast_layout_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="10dp"
-    android:textAlignment="center">
+    android:textAlignment="center"
+    android:theme="@style/Theme.KCupJournal">
 
 
     <TextView
@@ -13,27 +15,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="TextView"
+        android:text="@string/label_name"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textColorHighlight="@color/light_brown_bg"
         android:textColorHint="@color/medium_brown_bg"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:theme="@style/Theme.KCupJournal" />
 
     <TextView
         android:id="@+id/viewcompanyTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="TextView"
+        android:text="@string/label_name"
         android:textColor="@color/black"
         android:textColorHighlight="@color/light_brown_bg"
-        android:textColorHint="@color/medium_brown_bg" />
+        android:textColorHint="@color/medium_brown_bg"
+        android:theme="@style/Theme.KCupJournal" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:theme="@style/Theme.KCupJournal">
 
         <RatingBar
             android:id="@+id/viewRatingBar"
@@ -45,72 +50,85 @@
             android:max="5"
             android:numStars="5"
             android:progress="2"
+            android:theme="@style/Theme.KCupJournal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:theme="@style/Theme.KCupJournal"
         app:cardCornerRadius="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:theme="@style/Theme.KCupJournal">
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/label_overall_score"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:theme="@style/Theme.KCupJournal" />
 
             <ProgressBar
                 android:id="@+id/viewOverallPbar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:theme="@style/Theme.KCupJournal" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/label_bitterness_score"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:theme="@style/Theme.KCupJournal" />
 
             <ProgressBar
                 android:id="@+id/viewBitternessPbar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:theme="@style/Theme.KCupJournal" />
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/label_flavor_score"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:theme="@style/Theme.KCupJournal" />
 
             <ProgressBar
                 android:id="@+id/viewFlavorPBar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:theme="@style/Theme.KCupJournal" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/label_sweetness_score"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:theme="@style/Theme.KCupJournal" />
 
             <ProgressBar
                 android:id="@+id/viewSweetnessPbar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:theme="@style/Theme.KCupJournal" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -118,25 +136,30 @@
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_weight="1"
+        android:theme="@style/Theme.KCupJournal"
         app:cardCornerRadius="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:theme="@style/Theme.KCupJournal">
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/label_comments"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:theme="@style/Theme.KCupJournal" />
 
             <TextView
                 android:id="@+id/viewCommentsTxt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="TextView" />
+                android:text="TextView"
+                android:theme="@style/Theme.KCupJournal"
+                tools:text="@string/label_comments" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
