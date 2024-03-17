@@ -4,10 +4,11 @@
     android:id="@+id/toast_layout_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/lightCream"
     android:orientation="vertical"
     android:padding="10dp"
     android:textAlignment="center"
-    android:theme="@style/Theme.KCupJournal">
+    android:theme="@style/CoffeeTheme">
 
 
     <TextView
@@ -15,42 +16,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@color/lightCream"
         android:text="@string/label_name"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textColorHighlight="@color/light_brown_bg"
         android:textColorHint="@color/medium_brown_bg"
         android:textSize="24sp"
-        android:theme="@style/Theme.KCupJournal" />
+        android:theme="@style/CoffeeTheme" />
 
     <TextView
         android:id="@+id/viewcompanyTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:background="@color/lightCream"
         android:text="@string/label_name"
         android:textColor="@color/black"
         android:textColorHighlight="@color/light_brown_bg"
         android:textColorHint="@color/medium_brown_bg"
-        android:theme="@style/Theme.KCupJournal" />
+        android:theme="@style/CoffeeTheme" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:theme="@style/Theme.KCupJournal">
+        android:background="@color/lightCream"
+        android:theme="@style/CoffeeTheme">
 
         <RatingBar
             android:id="@+id/viewRatingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@color/lightCream"
             android:foregroundTintMode="add"
             android:isIndicator="true"
             android:max="5"
             android:numStars="5"
             android:progress="2"
-            android:theme="@style/Theme.KCupJournal"
+            android:theme="@style/CoffeeTheme"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,74 +66,84 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:theme="@style/Theme.KCupJournal"
+        android:background="@color/lightCream"
+        android:theme="@style/CoffeeTheme"
         app:cardCornerRadius="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/lightCream"
             android:orientation="vertical"
-            android:theme="@style/Theme.KCupJournal">
+            android:theme="@style/CoffeeTheme">
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/lightCream"
                 android:text="@string/label_overall_score"
                 android:textColor="@color/black"
-                android:theme="@style/Theme.KCupJournal" />
+                android:theme="@style/CoffeeTheme" />
 
             <ProgressBar
                 android:id="@+id/viewOverallPbar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/Theme.KCupJournal" />
+                android:background="@color/lightCream"
+                android:theme="@style/CoffeeTheme" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/lightCream"
                 android:text="@string/label_bitterness_score"
                 android:textColor="@color/black"
-                android:theme="@style/Theme.KCupJournal" />
+                android:theme="@style/CoffeeTheme" />
 
             <ProgressBar
                 android:id="@+id/viewBitternessPbar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/Theme.KCupJournal" />
+                android:background="@color/lightCream"
+                android:theme="@style/CoffeeTheme" />
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/lightCream"
                 android:text="@string/label_flavor_score"
                 android:textColor="@color/black"
-                android:theme="@style/Theme.KCupJournal" />
+                android:theme="@style/CoffeeTheme" />
 
             <ProgressBar
                 android:id="@+id/viewFlavorPBar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/Theme.KCupJournal" />
+                android:background="@color/lightCream"
+                android:theme="@style/CoffeeTheme" />
 
             <TextView
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/lightCream"
                 android:text="@string/label_sweetness_score"
                 android:textColor="@color/black"
-                android:theme="@style/Theme.KCupJournal" />
+                android:theme="@style/CoffeeTheme" />
 
             <ProgressBar
                 android:id="@+id/viewSweetnessPbar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/Theme.KCupJournal" />
+                android:background="@color/lightCream"
+                android:theme="@style/CoffeeTheme" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -136,29 +151,33 @@
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_weight="1"
-        android:theme="@style/Theme.KCupJournal"
+        android:background="@color/lightCream"
+        android:theme="@style/CoffeeTheme"
         app:cardCornerRadius="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/lightCream"
             android:orientation="vertical"
-            android:theme="@style/Theme.KCupJournal">
+            android:theme="@style/CoffeeTheme">
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/lightCream"
                 android:text="@string/label_comments"
-                android:textColor="@color/black"
-                android:theme="@style/Theme.KCupJournal" />
+                android:theme="@style/CoffeeTheme" />
 
             <TextView
                 android:id="@+id/viewCommentsTxt"
+                style="@style/CoffeeTextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/lightCream"
                 android:text="TextView"
-                android:theme="@style/Theme.KCupJournal"
+                android:theme="@style/CoffeeTheme"
                 tools:text="@string/label_comments" />
 
         </LinearLayout>

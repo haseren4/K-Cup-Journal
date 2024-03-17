@@ -130,6 +130,7 @@
 
     <Button
         android:id="@+id/saveBtn"
+        style="@style/CoffeeButtonStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

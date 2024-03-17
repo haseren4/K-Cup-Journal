@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme -->
+    <style name="CoffeeTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/coffeeBrown</item>
+        <item name="colorPrimaryDark">@color/darkCoffeeBrown</item>
+        <item name="colorAccent">@color/coffeeAccent</item>
+        <item name="android:windowBackground">@color/lightCream</item>
+        <!-- Customize typography, elevation, and other attributes as needed -->
+    </style>
+
+    <!-- Style for your custom toolbar -->
+    <style name="CoffeeToolbarStyle" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <!-- Customize your toolbar style here -->
+        <item name="android:background">@color/coffeeBrown</item>
+        <!-- Add more customizations as needed -->
+    </style>
+
+    <!-- Style for your custom buttons -->
+    <style name="CoffeeButtonStyle" parent="Widget.MaterialComponents.Button">
+        <!-- Customize your button style here -->
+        <item name="android:textColor">@android:color/white</item>
+        <item name="backgroundTint">@color/coffeeAccent</item>
+        <!-- Add more customizations as needed -->
+    </style>
+
+    <!-- Style for your custom text views -->
+    <style name="CoffeeTextViewStyle" parent="Widget.MaterialComponents.TextView">
+        <!-- Customize your text view style here -->
+        <item name="android:textColor">@color/darkCoffeeBrown</item>
+        <!-- Add more customizations as needed -->
+    </style>
+    <!-- Style for coffee-themed floating action button (FAB) -->
+    <style name="CoffeeFabStyle" parent="Widget.MaterialComponents.FloatingActionButton">
+        <!-- Customize your FAB style here -->
+        <item name="android:backgroundTint">@color/coffeeAccent</item> <!-- Color for FAB background -->
+        <!-- Add more customizations as needed -->
+    </style>
+
+    <!-- Add more styles as needed -->
+
+</resources>

@@ -11,4 +11,8 @@
     <color name="light_blue_600">#FF039BE5</color>
     <color name="gray_400">#FFBDBDBD</color>
     <color name="gray_600">#FF757575</color>
+    <color name="coffeeBrown">#795548</color> <!-- Warm brown -->
+    <color name="darkCoffeeBrown">#5D4037</color> <!-- Darker brown -->
+    <color name="coffeeAccent">#8D6E63</color> <!-- Coffee accent color -->
+    <color name="lightCream">#FFF8E1</color> <!-- Light cream color for background -->
 </resources>
