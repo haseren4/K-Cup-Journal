@@ -46,6 +46,17 @@ public class MainActivity extends AppCompatActivity {
 
         con = this.getApplication().getApplicationContext();
 
+        addBtn.setOnClickListener(l ->{
+            this.finish();
+            Intent addIntent = new Intent(this, AddRecordActivity.class);
+            startActivity(addIntent);
+        });
+
+   }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -55,16 +66,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         t.run();
-        
-        addBtn.setOnClickListener(l ->{
-            this.finish();
-            Intent addIntent = new Intent(this, AddRecordActivity.class);
-            startActivity(addIntent);
-        });
-
-   }
+    }
 
     private void addViews() {
+        recordContainer.removeAllViews();
         for(KCup entry : entries){
             KCupListView v = new KCupListView(con, entry);
             v.deleteBtn.setOnClickListener(l->{
