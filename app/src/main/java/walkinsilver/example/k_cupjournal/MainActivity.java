@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadDatabase() {
-        entries = dao.getAll();
+        entries = dao.getAllMainSorted();
 
         if(entries.isEmpty()){
             System.out.println("Create Bootstrap Item(s)");

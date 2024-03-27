@@ -18,4 +18,7 @@ public interface KCupDao {
     List<KCup> getAll();
     @Query("SELECT * FROM kcup WHERE id = :id")
     KCup getKCupByID(int id);
+
+    @Query("SELECT * FROM kcup ORDER BY company, rating, name")
+    List<KCup> getAllMainSorted();
 }
